@@ -26,8 +26,9 @@ SECRET_KEY = 'django-insecure-0fh+#+hh#_8owewh5nn!5ou5ohuf29xo-d42ervaf+&31c(%mi
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+ALLOWED_HOSTS = ['.vercel.app']
 """ 
-ALLOWED_HOSTS = []
+
 SECURE_SSL_REDIRECT = True
 SECURE_HSTS_SECONDS = 2,592,000
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
@@ -109,6 +110,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'setup.urls'
+# Vue project location
 
 TEMPLATES = [
     {
@@ -174,7 +176,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
@@ -185,6 +186,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
-
-CORS_ALLOWED_ORIGINS= ['http://127.0.0.1:5173','http://localhost:5173']
+CORS_ALLOW_ALL_ORIGINS = True
